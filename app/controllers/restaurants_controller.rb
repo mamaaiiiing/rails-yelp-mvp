@@ -4,11 +4,10 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
   end
-  def show          # GET /restaurants/:id
-  end
+  def show
 
   def new
-    @restaurant = Restaurant.new         # GET /restaurants/new
+    @restaurant = Restaurant.new
   end
 
   def create
@@ -17,16 +16,16 @@ class RestaurantsController < ApplicationController
       redirect_to restaurant_path(@restaurant)
     else
       render :new
-    end      # POST /restaurants
+    end
   end
 
-  def edit          # GET /restaurants/:id/edit
+  def edit
   end
 
-  # def update        # PATCH /restaurants/:id
+  # def update
   # end
 
-  # def destroy       # DELETE /restaurants/:id
+  # def destroy
   # end
   private
 
